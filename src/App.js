@@ -4,26 +4,30 @@ import 'animate.css'
 
 function App() {
   
-  let time = new Date().toLocaleTimeString()
+  const getDate = () =>{
+    return new Date().toLocaleTimeString()
+  } 
 
-  const [currentTime, setCurrentTime] = useState(time)
+  const [currentTime, setCurrentTime] = useState(getDate())
 
   const clockFunc = setInterval(() => {
-    setCurrentTime(time)
+    setCurrentTime(getDate())
     clearInterval(clockFunc)
   }, 1000)
 
   useEffect(() => {
     const clockAnimate =  document.getElementById('clock-animate')
-    clockAnimate.setAttribute('class', 'animate__animated animate__zoomInLeft')
+    clockAnimate.setAttribute('class', 'animate__animated animate__bounceInLeft')
   }, [])
 
   return (
 
     <div className="App">
-        <div id="clock-animate"> 
+      <div>
+        <h1 id="clock-animate">
           {currentTime}
-        </div>
+        </h1>
+      </div>
     </div>
   );
 }

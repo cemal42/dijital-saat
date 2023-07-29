@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 @keyframes colorAnimation {
@@ -58,7 +59,7 @@
   color: white;
   padding: 25px 50px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
   animation: colorAnimation2 10s;
   animation-timing-function: ease;
@@ -66,5 +67,4 @@
   border-radius: 10px;
   background-color: #1D5B79;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  ;
 }
