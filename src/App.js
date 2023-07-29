@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import './App.css'
+import 'animate.css'
 
 function App() {
+  
+  let time = new Date().toLocaleTimeString()
+
+  const [currentTime, setCurrentTime] = useState(time)
+
+  const clockFunc = setInterval(() => {
+    setCurrentTime(time)
+    clearInterval(clockFunc)
+  }, 1000)
+
+  useEffect(() => {
+    const clockAnimate =  document.getElementById('clock-animate')
+    clockAnimate.setAttribute('class', 'animate__animated animate__zoomInLeft')
+  }, [])
+
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div id="clock-animate"> 
+          {currentTime}
+        </div>
     </div>
   );
 }
