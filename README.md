@@ -1,1 +1,1 @@
-https://master--kaleidoscopic-lollipop-0edabd.netlify.app/
+[https://master--kaleidoscopic-lollipop-0edabd.netlify.app/]
